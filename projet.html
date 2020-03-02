@@ -1,0 +1,63 @@
+<!doctype HTML>
+<html>
+<script src="./aframe.min.js"></script> <!-- charge les sources js en locale -->
+<script src="./aframe-ar.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+
+<!-- Ceci est un exemple par default projetant un cube 3d jaune sur un marqueur 'Hiro'
+
+<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam;'>  Creation de la scene
+    <a-marker preset="hiro">                                          Lors de la detection du marqueur 'Hiro'
+        <a-box position='0 0.5 0' material='color: yellow;'></a-box>  Objet a afficher
+    </a-marker>
+    <a-entity camera></a-entity>
+</a-scene>
+-->
+
+<!--
+
+   <a-scene id="scene" cursor="fuse: false; rayOrigin: mouse;" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+       <a-marker id="animated-marker" type='barcode' value='1'>
+
+
+
+<a-entity scale='0.01 0.01 0.01' position='-1 -1 -1' rotation='0 180 180'
+               obj-model= "obj: url(https://raw.githubusercontent.com/PILrobot/roboto/master/hirise.obj);">  https://raw.githubusercontent.com/PILrobot/roboto/master/ is the repo for .obj used in this app
+
+         </a-entity>
+
+
+       </a-marker>
+       <a-entity camera mouse-cursor position="0 0 0"></a-entity>
+
+
+</a-scene> -->
+<!--
+<a-scene embedded arjs='trackingMethod: best;'>
+
+    <a-gltf-model rotation="-90 0 0" position="1 0 0" src="https://raw.githubusercontent.com/PILrobot/roboto/master/arm4.gltf"></a-gltf-model>
+    <a-marker-camera preset='hiro'></a-marker-camera>
+    <a-camera-static/>
+</a-scene>-->
+
+<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam;'>
+    <a-marker preset="hiro">
+        <a-gltf-model rotation="-90 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="https://raw.githubusercontent.com/PILrobot/roboto/master/arm5.gltf"></a-gltf-model>
+    </a-marker>
+    <a-entity camera></a-entity>
+</a-scene>
+
+
+</body>
+
+
+
+</html>
+
+<!--
+
+           <a-plane rotation="-90 0 0" position="0 0 0" width="5" height="4" material="opacity: 0.7" color="red"></a-plane>
+             <a-entity rotation="-90 0 0" position="1 0 0" scale="5 5 5" text="value: HELLO;color:black"></a-entity>
+             </a-plane>
+-->
